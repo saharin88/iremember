@@ -18,6 +18,7 @@ uses(
 )->in('Feature');
 uses()->group('seeder')->in('Feature/PersonSeederTest.php');
 uses()->group('api')->in('Feature/Api');
+uses()->group('console')->in('Feature/Console');
 
 /*
 |--------------------------------------------------------------------------
