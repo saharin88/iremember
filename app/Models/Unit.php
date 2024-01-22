@@ -12,10 +12,15 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use OwenIt\Auditing\Auditable;
 
-class Unit extends Model implements FamilyRelationsInterface
+class Unit extends Model implements \OwenIt\Auditing\Contracts\Auditable, FamilyRelationsInterface
 {
-    use HasFactory, HasFamilyRelations, Sluggable, SoftDeletes;
+    use Auditable, HasFactory, HasFamilyRelations, Sluggable, SoftDeletes;
+
+    protected $auditExclude = [
+        'image',
+    ];
 
     protected $fillable = [
         'name',

@@ -8,10 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+use OwenIt\Auditing\Auditable;
 
-class Battle extends Model
+class Battle extends Model implements \OwenIt\Auditing\Contracts\Auditable
 {
-    use HasFactory, Sluggable;
+    use Auditable, HasFactory, Sluggable;
+
+    protected $auditExclude = [
+        'image',
+    ];
 
     protected $fillable = [
         'name',
