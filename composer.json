@@ -16,6 +16,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "owen-it/laravel-auditing": "^13.6",
+        "revolution/laravel-google-sheets": "^6.2",
         "tapp/filament-auditing": "^3.0"
     },
     "require-dev": {
