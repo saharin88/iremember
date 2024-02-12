@@ -19,3 +19,5 @@ yarn-error.log
 /.vscode
 
 /storage/credentials.json
+.scribe/
+public/docs/

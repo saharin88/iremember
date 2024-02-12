@@ -22,6 +22,7 @@
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.9",
         "fakerphp/faker": "^1.9.1",
+        "knuckleswtf/scribe": "^4.29",
         "laravel-lang/common": "^6.1",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
