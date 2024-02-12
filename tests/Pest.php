@@ -14,8 +14,10 @@
 uses(
     Tests\TestCase::class,
     Illuminate\Foundation\Testing\RefreshDatabase::class,
+    \App\Traits\PersonTrait::class,
 )->in('Feature');
 uses()->group('seeder')->in('Feature/PersonSeederTest.php');
+uses()->group('api')->in('Feature/Api');
 
 /*
 |--------------------------------------------------------------------------
